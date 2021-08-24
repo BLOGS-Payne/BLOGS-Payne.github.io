@@ -58,10 +58,11 @@
             "comments":
             {
                 "style": "tabs",
-                "active": null,
+                "active": "gitalk",
                 "storage": true,
                 "lazyload": false,
-                "nav": null
+                "nav": null,
+                "activeClass": "gitalk"
             },
             "algolia":
             {
@@ -274,7 +275,7 @@
                                             <time itemprop="dateCreated" datetime="2021-06-03T19:06:09+08:00" content="2021-06-03"> 06-03 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/cksplylu3002gdlgofble0l7r.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspn0kw40028t3goclbjba4q.html" itemprop="url">
                                                 <span itemprop="name">Redis:在集合中复制键</span>
                                             </a>
                                         </div>
@@ -286,7 +287,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-23T16:54:19+08:00" content="2021-01-23"> 01-23 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/cksplylv1004zdlgo672h46k1.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspn0kx40050t3goaq223vfh.html" itemprop="url">
                                                 <span itemprop="name">粗谈Redis事物</span>
                                             </a>
                                         </div>
@@ -298,7 +299,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-18T01:28:06+08:00" content="2021-01-18"> 01-18 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/cksplylu3002idlgo4k3sholo.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspn0kw9002nt3go7oj4atje.html" itemprop="url">
                                                 <span itemprop="name">Redis服务与连接那些事儿</span>
                                             </a>
                                         </div>
@@ -310,7 +311,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-18T01:26:08+08:00" content="2021-01-18"> 01-18 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/cksplylxo00e3dlgo8jpm8ot8.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspn0kzd00dvt3go9rwx0xvt.html" itemprop="url">
                                                 <span itemprop="name">详探Redis.conf</span>
                                             </a>
                                         </div>
@@ -322,7 +323,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-14T01:29:01+08:00" content="2021-01-14"> 01-14 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/cksplylu5002mdlgo7nbrcgrl.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspn0kw6002ft3go8p31hlv6.html" itemprop="url">
                                                 <span itemprop="name">Redis概览与安装</span>
                                             </a>
                                         </div>
@@ -500,38 +501,6 @@
     </script>
     <script src="/js/local-search.js"></script>
     <script src="/.js"></script>
-    <script>
-        NexT.utils.loadComments(document.querySelector('#valine-comments'), () =>
-        {
-            NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () =>
-            {
-                var GUEST = ['nick', 'mail', 'link'];
-                var guest = 'nick,mail,link';
-                guest = guest.split(',').filter(item =>
-                {
-                    return GUEST.includes(item);
-                });
-                new Valine(
-                {
-                    el: '#valine-comments',
-                    verify: false,
-                    notify: false,
-                    appId: 'v5yI1sEaxpTl6gCkO0dApNOH-gzGzoHsz',
-                    appKey: 'ugl27izkUCvh7RIyvo7kcFCv',
-                    placeholder: "Just go go",
-                    avatar: 'mm',
-                    meta: guest,
-                    pageSize: '10' || 10,
-                    visitor: false,
-                    lang: 'zh-cn' || 'zh-cn',
-                    path: location.pathname,
-                    recordIP: true,
-                    serverURLs: ''
-                });
-            }, window.Valine);
-        });
-
-    </script>
 </body>
 
 </html>
