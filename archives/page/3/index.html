@@ -58,11 +58,11 @@
             "comments":
             {
                 "style": "tabs",
-                "active": "gitalk",
+                "active": "valine",
                 "storage": true,
                 "lazyload": false,
                 "nav": null,
-                "activeClass": "gitalk"
+                "activeClass": "valine"
             },
             "algolia":
             {
@@ -271,7 +271,7 @@
                                             <time itemprop="dateCreated" datetime="2020-11-21T22:10:19+08:00" content="2020-11-21"> 11-21 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qww0014blgo0wq1e6sf.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzs60013i6goe4fdaa8i.html" itemprop="url">
                                                 <span itemprop="name">Golang切片-slice</span>
                                             </a>
                                         </div>
@@ -283,7 +283,7 @@
                                             <time itemprop="dateCreated" datetime="2020-11-21T22:10:19+08:00" content="2020-11-21"> 11-21 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qx1001mblgo9w9mfmd0.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzs9001fi6go19fa17ks.html" itemprop="url">
                                                 <span itemprop="name">Golang介绍</span>
                                             </a>
                                         </div>
@@ -295,7 +295,7 @@
                                             <time itemprop="dateCreated" datetime="2020-11-21T22:10:19+08:00" content="2020-11-21"> 11-21 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qx2001sblgoe6062lds.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsd001ri6goay9yebal.html" itemprop="url">
                                                 <span itemprop="name">Golang运算符</span>
                                             </a>
                                         </div>
@@ -307,7 +307,7 @@
                                             <time itemprop="dateCreated" datetime="2020-11-21T21:52:58+08:00" content="2020-11-21"> 11-21 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qwt000vblgoc0d6h7yb.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzs0000oi6gofbqjdnzp.html" itemprop="url">
                                                 <span itemprop="name">Golang介绍</span>
                                             </a>
                                         </div>
@@ -488,6 +488,38 @@
     </script>
     <script src="/js/local-search.js"></script>
     <script src="/.js"></script>
+    <script>
+        NexT.utils.loadComments(document.querySelector('#valine-comments'), () =>
+        {
+            NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () =>
+            {
+                var GUEST = ['nick', 'mail', 'link'];
+                var guest = 'nick,mail,link';
+                guest = guest.split(',').filter(item =>
+                {
+                    return GUEST.includes(item);
+                });
+                new Valine(
+                {
+                    el: '#valine-comments',
+                    verify: false,
+                    notify: false,
+                    appId: 'v5yI1sEaxpTl6gCkO0dApNOH-gzGzoHsz',
+                    appKey: 'ugl27izkUCvh7RIyvo7kcFCv',
+                    placeholder: "Just go go",
+                    avatar: 'mm',
+                    meta: guest,
+                    pageSize: '10' || 10,
+                    visitor: false,
+                    lang: 'zh-cn' || 'zh-cn',
+                    path: location.pathname,
+                    recordIP: true,
+                    serverURLs: ''
+                });
+            }, window.Valine);
+        });
+
+    </script>
 </body>
 
 </html>

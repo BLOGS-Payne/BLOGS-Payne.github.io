@@ -58,11 +58,11 @@
             "comments":
             {
                 "style": "tabs",
-                "active": "gitalk",
+                "active": "valine",
                 "storage": true,
                 "lazyload": false,
                 "nav": null,
-                "activeClass": "gitalk"
+                "activeClass": "valine"
             },
             "algolia":
             {
@@ -275,7 +275,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-12T19:33:32+08:00" content="2021-01-12"> 01-12 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qxj002xblgog7gh5hqq.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzst002yi6goac6t80u6.html" itemprop="url">
                                                 <span itemprop="name">Supervisor-程序管理更加得心应手</span>
                                             </a>
                                         </div>
@@ -290,7 +290,7 @@
                                             <time itemprop="dateCreated" datetime="2020-12-19T14:11:52+08:00" content="2020-12-19"> 12-19 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qxp003fblgofo4d1bzg.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzt1003li6goc6hx92cz.html" itemprop="url">
                                                 <span itemprop="name">scrapy-splash对接代理</span>
                                             </a>
                                         </div>
@@ -468,6 +468,38 @@
     </script>
     <script src="/js/local-search.js"></script>
     <script src="/.js"></script>
+    <script>
+        NexT.utils.loadComments(document.querySelector('#valine-comments'), () =>
+        {
+            NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () =>
+            {
+                var GUEST = ['nick', 'mail', 'link'];
+                var guest = 'nick,mail,link';
+                guest = guest.split(',').filter(item =>
+                {
+                    return GUEST.includes(item);
+                });
+                new Valine(
+                {
+                    el: '#valine-comments',
+                    verify: false,
+                    notify: false,
+                    appId: 'v5yI1sEaxpTl6gCkO0dApNOH-gzGzoHsz',
+                    appKey: 'ugl27izkUCvh7RIyvo7kcFCv',
+                    placeholder: "Just go go",
+                    avatar: 'mm',
+                    meta: guest,
+                    pageSize: '10' || 10,
+                    visitor: false,
+                    lang: 'zh-cn' || 'zh-cn',
+                    path: location.pathname,
+                    recordIP: true,
+                    serverURLs: ''
+                });
+            }, window.Valine);
+        });
+
+    </script>
 </body>
 
 </html>

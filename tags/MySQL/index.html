@@ -58,11 +58,11 @@
             "comments":
             {
                 "style": "tabs",
-                "active": "gitalk",
+                "active": "valine",
                 "storage": true,
                 "lazyload": false,
                 "nav": null,
-                "activeClass": "gitalk"
+                "activeClass": "valine"
             },
             "algolia":
             {
@@ -275,7 +275,7 @@
                                             <time itemprop="dateCreated" datetime="2021-08-23T22:37:55+08:00" content="2021-08-23"> 08-23 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qx90029blgoh6h930xf.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsf0020i6goc9i08grg.html" itemprop="url">
                                                 <span itemprop="name">MySQL的SQL使用之上</span>
                                             </a>
                                         </div>
@@ -287,7 +287,7 @@
                                             <time itemprop="dateCreated" datetime="2021-08-21T23:07:19+08:00" content="2021-08-21"> 08-21 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qx80026blgo9gjx5oqc.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsj0028i6go8thh6m0g.html" itemprop="url">
                                                 <span itemprop="name">MySQL数据类型</span>
                                             </a>
                                         </div>
@@ -299,7 +299,7 @@
                                             <time itemprop="dateCreated" datetime="2021-08-21T10:42:42+08:00" content="2021-08-21"> 08-21 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qx70022blgofsgu3ufb.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsi0024i6go2q9645lf.html" itemprop="url">
                                                 <span itemprop="name">MySQL数据库体系结构</span>
                                             </a>
                                         </div>
@@ -311,7 +311,7 @@
                                             <time itemprop="dateCreated" datetime="2021-08-21T10:04:42+08:00" content="2021-08-21"> 08-21 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qx4001yblgo0m59eghi.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsk002bi6godynqh3xs.html" itemprop="url">
                                                 <span itemprop="name">MySQL数据库一些概念</span>
                                             </a>
                                         </div>
@@ -323,7 +323,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-13T20:41:20+08:00" content="2021-01-13"> 01-13 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qxa002dblgoctha5bzj.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsn002mi6go2okyhwhb.html" itemprop="url">
                                                 <span itemprop="name">SQL,何必在忆之一(索引与执行计划篇)</span>
                                             </a>
                                         </div>
@@ -335,7 +335,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-11T16:21:48+08:00" content="2021-01-11"> 01-11 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qxs003qblgo7kdeevwp.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzt2003qi6gof3wn1wub.html" itemprop="url">
                                                 <span itemprop="name">sql,何必在忆-基础篇</span>
                                             </a>
                                         </div>
@@ -347,7 +347,7 @@
                                             <time itemprop="dateCreated" datetime="2021-01-03T21:26:58+08:00" content="2021-01-03"> 01-03 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qxz004dblgohd0zg16s.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzt90048i6go62kjfiq3.html" itemprop="url">
                                                 <span itemprop="name">执行一条SQL，这之间到底发生了啥？</span>
                                             </a>
                                         </div>
@@ -525,6 +525,38 @@
     </script>
     <script src="/js/local-search.js"></script>
     <script src="/.js"></script>
+    <script>
+        NexT.utils.loadComments(document.querySelector('#valine-comments'), () =>
+        {
+            NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () =>
+            {
+                var GUEST = ['nick', 'mail', 'link'];
+                var guest = 'nick,mail,link';
+                guest = guest.split(',').filter(item =>
+                {
+                    return GUEST.includes(item);
+                });
+                new Valine(
+                {
+                    el: '#valine-comments',
+                    verify: false,
+                    notify: false,
+                    appId: 'v5yI1sEaxpTl6gCkO0dApNOH-gzGzoHsz',
+                    appKey: 'ugl27izkUCvh7RIyvo7kcFCv',
+                    placeholder: "Just go go",
+                    avatar: 'mm',
+                    meta: guest,
+                    pageSize: '10' || 10,
+                    visitor: false,
+                    lang: 'zh-cn' || 'zh-cn',
+                    path: location.pathname,
+                    recordIP: true,
+                    serverURLs: ''
+                });
+            }, window.Valine);
+        });
+
+    </script>
 </body>
 
 </html>

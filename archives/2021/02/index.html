@@ -58,11 +58,11 @@
             "comments":
             {
                 "style": "tabs",
-                "active": "gitalk",
+                "active": "valine",
                 "storage": true,
                 "lazyload": false,
                 "nav": null,
-                "activeClass": "gitalk"
+                "activeClass": "valine"
             },
             "algolia":
             {
@@ -271,7 +271,7 @@
                                             <time itemprop="dateCreated" datetime="2021-02-12T23:31:07+08:00" content="2021-02-12"> 02-12 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qxi002ublgo52pgf0p0.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsv0034i6goddyz1u1t.html" itemprop="url">
                                                 <span itemprop="name">golang并发模式</span>
                                             </a>
                                         </div>
@@ -283,7 +283,7 @@
                                             <time itemprop="dateCreated" datetime="2021-02-12T23:31:00+08:00" content="2021-02-12"> 02-12 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qxl0030blgoftm965do.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzsw0037i6goe09o7omv.html" itemprop="url">
                                                 <span itemprop="name">golang并发铁索连环-context</span>
                                             </a>
                                         </div>
@@ -295,7 +295,7 @@
                                             <time itemprop="dateCreated" datetime="2021-02-07T01:59:26+08:00" content="2021-02-07"> 02-07 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qx3001vblgo2wav3cpn.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogzse001xi6go0yz9gso0.html" itemprop="url">
                                                 <span itemprop="name">Kubernetes集群搭建</span>
                                             </a>
                                         </div>
@@ -307,7 +307,7 @@
                                             <time itemprop="dateCreated" datetime="2021-02-04T22:27:25+08:00" content="2021-02-04"> 02-04 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qye005hblgoh6271kxh.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogztp005bi6gobjpwd7ys.html" itemprop="url">
                                                 <span itemprop="name">盘点go并发那些事儿之二-并发控制得心应手</span>
                                             </a>
                                         </div>
@@ -319,7 +319,7 @@
                                             <time itemprop="dateCreated" datetime="2021-02-03T20:56:48+08:00" content="2021-02-03"> 02-03 </time>
                                         </div>
                                         <div class="post-title">
-                                            <a class="post-title-link" href="/ckspo7qy5004yblgo7ket9lon.html" itemprop="url">
+                                            <a class="post-title-link" href="/ckspogztf004oi6gohhar3iwp.html" itemprop="url">
                                                 <span itemprop="name">盘点go并发那些事儿</span>
                                             </a>
                                         </div>
@@ -497,6 +497,38 @@
     </script>
     <script src="/js/local-search.js"></script>
     <script src="/.js"></script>
+    <script>
+        NexT.utils.loadComments(document.querySelector('#valine-comments'), () =>
+        {
+            NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () =>
+            {
+                var GUEST = ['nick', 'mail', 'link'];
+                var guest = 'nick,mail,link';
+                guest = guest.split(',').filter(item =>
+                {
+                    return GUEST.includes(item);
+                });
+                new Valine(
+                {
+                    el: '#valine-comments',
+                    verify: false,
+                    notify: false,
+                    appId: 'v5yI1sEaxpTl6gCkO0dApNOH-gzGzoHsz',
+                    appKey: 'ugl27izkUCvh7RIyvo7kcFCv',
+                    placeholder: "Just go go",
+                    avatar: 'mm',
+                    meta: guest,
+                    pageSize: '10' || 10,
+                    visitor: false,
+                    lang: 'zh-cn' || 'zh-cn',
+                    path: location.pathname,
+                    recordIP: true,
+                    serverURLs: ''
+                });
+            }, window.Valine);
+        });
+
+    </script>
 </body>
 
 </html>
